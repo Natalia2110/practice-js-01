@@ -12,3 +12,13 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const ulEl = document.querySelector('.gallery');
+
+ulEl.classList.add('gallery-list');
+console.log(ulEl);
+const imagesCreate = images.reduce((murkup, { url, alt }) => murkup + `<li><img class  = "gallery-item" width = 400" height = "250" src = ${ url } alt = "${ alt }"></li>`, "");
+
+  console.log(imagesCreate);
+
+ulEl.insertAdjacentHTML('afterbegin', imagesCreate);
