@@ -9,9 +9,11 @@ const refs = {
 
 // const inputEvent = () => {
 //     spanEl.textContent = inputEl.currentTarget.value;
+
 // }
 const onInputEvent = (event) => {
-    refs.spanEl.textContent = event.currentTarget.value.trim();
+    // console.log(event.currentTarget.value.trim());
+    refs.spanEl.textContent = event.currentTarget.value.trim()? event.currentTarget.value.trim(): "Anonymous";
   };
 
   refs.inputEl.addEventListener("input", onInputEvent);
