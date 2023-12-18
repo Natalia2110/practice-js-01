@@ -9,24 +9,22 @@ console.log(inputEl);
 
 function onInputBlur (event) {
     const inputElDataLength = Number(inputEl.getAttribute("data-length"));
-    console.log(inputElDataLength);
+    // console.log(inputElDataLength);
 
     const inputElOnEvent = event.currentTarget.value.trim().length;
-    console.log(inputElOnEvent);
+    // console.log(inputElOnEvent);
 
-    const onBorderStyle = inputElDataLength === inputElOnEvent? inputEl.classList.toggle("valid"): inputEl.classList.toggle("invalid");
-    return onBorderStyle;
-    // const onBorderStyle = inputElDataLength === inputElOnEvent? inputEl.classList.add("valid"): inputEl.classList.add("invalid");
+  
 
-    // return onBorderStyle;
-    // if(inputElDataLength === inputElOnEvent) {
-    //    return inputEl.classList.toggle("valid");
-    // } else {
-    //    return inputEl.classList.toggle("invalid");
-    // }
+    if(inputElDataLength === inputElOnEvent) {
+        inputEl.classList.remove('invalid');
+        inputEl.classList.add('valid')
+
+    } else {
+        inputEl.classList.remove('valid');
+        inputEl.classList.add("invalid");
+    }
     
-    
-    // if(event.currentTarget.length >)
 }
 
 inputEl.addEventListener("blur", onInputBlur);
