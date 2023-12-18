@@ -1,5 +1,5 @@
 const inputEl = document.getElementById('validation-input');
-console.log(inputEl);
+// console.log(inputEl);
 
 
 
