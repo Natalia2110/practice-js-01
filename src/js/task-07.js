@@ -5,8 +5,10 @@ const refs = {
 
 // console.log(refs.inputEl);
 // console.log(refs.spanEl);
+refs.spanEl.style.fontSize = refs.inputEl.value + 'px';
 
 refs.inputEl.addEventListener("input", onInputChange);
+
 
 function onInputChange (event) {
     // console.log(event.currentTarget.value);
